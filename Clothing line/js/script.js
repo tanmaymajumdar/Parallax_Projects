@@ -20,12 +20,19 @@ $(window).scroll(function() {
     'transform':'translate('+wScroll/2+'%,'+wScroll/3+'%)'
   });
 
-  if(wScroll > $('.itemGrid').offset().top - 500) {
-  $('.item1').each(function(i){
+  if(wScroll > $('#gallery').offset().top -500) {
+  //  console.log('asd');
+    $('.models').each(function(i){
+        console.log("i : "+i);
+        setTimeout(function(){
+          $('.models').eq(i).addClass('modelVisible');
+        } , (1+i)*100);
+    });
 
-    setTimeout(function() {
-      $('.item1').eq(i).addClass('successfully-saved');
-    } , 150 * (i+1));
-  });
+
+  }else{
+    $('.models').removeClass('modelVisible');
   }
+
+
 });
