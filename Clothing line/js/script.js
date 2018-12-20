@@ -18,8 +18,14 @@ $(window).scroll(function() {
 
   $('.back_bird').css({
     'transform':'translate('+wScroll/2+'%,'+wScroll/3+'%)'
-
   });
 
-//  console.log(wScroll/window.innerWidth);
+  if(wScroll > $('.itemGrid').offset().top - 500) {
+  $('.item1').each(function(i){
+
+    setTimeout(function() {
+      $('.item1').eq(i).addClass('successfully-saved');
+    } , 150 * (i+1));
+  });
+  }
 });
