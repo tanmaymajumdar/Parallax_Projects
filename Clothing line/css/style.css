@@ -147,21 +147,23 @@ hr{
 
 #periscopeWindow{
 
-  height: 440px;
-  width: 440px;
+  height: 640px;
+  width: 640px;
   margin: auto;
   border-radius: 50%;
   overflow: hidden;
   padding: 25px 28px 28px;
   text-align: center;
   box-sizing: border-box;
-  margin-top: 50%;
+  position: absolute;
+  margin-left: 30%;
+  margin-top: 60%;
   align-items: center;
   font-size: 60px;
   background-size: contain;
   background-image: url('../images/model2.jpg');
   background-attachment: fixed;
-  background-position: top center;
+  background-position: center 0px;
   border-radius: 50%;
 }
 
@@ -188,4 +190,57 @@ left:0;
 
 .models:hover{
   background-size: cover;
+}
+
+.promoTextContainer{
+
+  position:absolute;
+  top:0;
+  bottom: 0;
+  left:0;
+  bottom:0;
+  background-color:rgba(0,0,0,.5);
+  height: 100%;
+  width:100%;
+}
+
+.promoText{
+  position:absolute;
+  font-size: .7em;
+  font-family: "Open Sans" , sans-serif;
+  top:50%;
+  font-weight: lighter;
+  left:20%;
+  right:20%;
+  color:white;
+}
+
+@@keyframes backgroundColorChanger {
+  from {background-color : rgba(255,255,255,0);}
+  to {background-color: rgba(255,255,255,.5);}
+}
+
+#shopNow{
+  display: block;
+  font-size: .46em;
+  font-weight: bolder;
+  margin-top: 5%;
+  border : 1px solid rgba(255,255,255,.5);
+  width: 30%;
+  background-color:rgb(255,255,255,0);
+  padding:5px;
+  margin-left: 33%;
+  animation-name:backgroundColorChanger;
+  animation-duration:1s;
+}
+
+
+
+
+
+
+
+
+#cost{
+  display: block;
 }
