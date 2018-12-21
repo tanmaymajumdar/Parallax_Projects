@@ -21,7 +21,7 @@ $(window).scroll(function() {
   });
 
   if(wScroll > $('#gallery').offset().top -500) {
-    let aspectRatio = wScroll / window.innerHeight;
+    var aspectRatio = wScroll / window.innerHeight;
     console.log('aspect ration '+aspectRatio);
     $('.models').each(function(i){
       //  console.log("i : "+i);
@@ -43,5 +43,8 @@ $(window).scroll(function() {
     $('.models').removeClass('modelVisible');
   }
 
+  let periscopeOpacity = wScroll - ($('.promoTextContainer').offset().top / wScroll);
+
+  $('.promoTextContainer').css({'opacity' : periscopeOpacity+''});
 
 });
