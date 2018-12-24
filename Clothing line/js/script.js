@@ -1,3 +1,5 @@
+var render = true;
+
 $(window).scroll(function() {
 
 
@@ -51,9 +53,9 @@ $(window).scroll(function() {
   let screenOffset = wScroll / window.innerHeight;
   let blogOffset = 2 ;
 
-  var render = true;
 
-  if(screenOffset >= blogOffset && render) {
+
+  if(screenOffset >= blogOffset && render === true) {
 
     let offset = $('.blogs').offset().top-$(window).height() - wScroll - 750 ;
 
@@ -64,7 +66,10 @@ $(window).scroll(function() {
 
       let yy = -y
 
-      console.log(yy);
+      console.log($('.post1').offset().top  - $('.post2').offset().top);
+
+      let heightDifference = $('.post1').offset().top  - $('.post2').offset().top;
+
 
 
 
